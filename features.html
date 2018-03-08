@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#3DD481" />
+        <title>Easy Appointment Scheduling With Easy!Appointments</title>
+        <meta name="description" content="Easy!Appointments is an open source web appointment
+              scheduling system. It is free even for commercial use. Let's start with easy!">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="icon" sizes="192x192" href="img/ea-logo.png">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,600' rel='stylesheet' type='text/css'>
+        <style>
+            @keyframes fade {
+                100% {opacity: 1}
+            }
+
+            @keyframes spin {
+                100% {transform: rotate(360deg);}
+            }
+
+            @keyframes bounce  {
+              0%, 100% {transform: scale(0.0);}
+              50% {transform: scale(1.0);}
+            }
+
+            .loading {
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                background: #FFF;
+                z-index: 999;
+                padding-top: 45vh;
+            }
+
+            .spinner {
+                opacity: 0;
+                position: relative;
+                width: 45px;
+                height: 45px;
+                margin: 0 auto;
+                animation: spin 2s linear infinite, fade 1s 3s linear forwards;
+            }
+
+            .bubble-1,
+            .bubble-2 {
+                position: absolute;
+                top: 0;
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+                background-color: #3DD481;
+                animation: bounce 2s ease-in-out infinite;
+            }
+
+            .bubble-2 {
+                top: auto;
+                bottom: 0;
+                animation-delay: -1.0s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="spinner">
+                <div class="bubble-1"></div>
+                <div class="bubble-2"></div>
+             </div>
+         </div>
+
+        <!--
+            HEADER
+         -->
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <div class="title">Easy!Appointments</div>
+                    <div class="subtitle">Open Source Appointment Scheduler</div>
+                </div>
+                 <span class="menu-toggle glyphicon glyphicon-menu-hamburger visible-xs" data-toggle="collapse"
+                        data-target=".nav"></span>
+                <ul class="nav collapse">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="docs.html">Documentation</a></li>
+                    <li><a href="https://wordpress.org/plugins/easyappointments" target="_blank">WordPress Plugin</a></li>
+                    <li><a href="demo">Demo</a></li>
+                    <li><a href="blog">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--
+            #FEATURES
+         -->
+        <div id="features" class="section container">
+            <h2 class="section-title">#Features</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-left" src="img/manage-customers-appointments.png"
+                            alt="Customer And Appointment Management" />
+                    <h4>Appointment and Customer Management</h4>
+                    <p>
+                        Manage all your appointments with flexible calendar displays and layouts.
+                        Handle all the customer information and their booking history more easily
+                        than ever.
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-right" src="img/service-providers-organization.png"
+                            alt="Services and Service Providers" />
+                    <h4>Services and Service Providers</h4>
+                    <p>
+                        Set up your services and the employees/teams/sections which will serve
+                        the customers. Each service is completely configurable and every provider
+                        has his own schedule.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-left" src="img/business-work-flow-booking-rules.png"
+                            alt="Business Work Flow and Booking Rules Setup" />
+                    <h4>Business Workflow and Booking Rules</h4>
+                    <p>
+                        Configure the system at your own will, apply the business hours and breaks
+                        and let customers book, modify or cancel appointments within specific time
+                        periods.
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-right" src="img/google-calendar-sync.png" alt="Google Calendar Sync" />
+                    <h4>Google Calendar Sync</h4>
+                    <p>
+                        Synchronize your events with Google Calendar and share them with other
+                        applications. Providers and secretaries will be able to schedules their data
+                        as well.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-left" src="img/email-notifications.png" alt="Email Notifications" />
+                    <h4>Email Notifications</h4>
+                    <p>
+                        Get email notifications for any change on the schedule including bookings,
+                        modifications and cancellations. Customers are also informed in time for
+                        changes in their appointments.
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-right" src="img/stand-alone-installation.png" alt="Stand Alone Installation" />
+                    <h4>Stand Alone Installation</h4>
+                    <p>
+                        Install your own copy on your server and use the source code and database
+                        information in any way you want. Easy!Appointments is open and free!
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-left" src="img/translated-user-interface.png" alt="Translated User Interface" />
+                    <h4>Translated User Interface</h4>
+                    <p>
+                        Use the application in your own language! Easy!Appointments is currently translated
+                        into 21 languages which are updated and maintained from the community. New translations
+                        are being added all the time.
+                    </p>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-right" src="img/community.png" alt="Translated User Interface" />
+                    <h4>User Community</h4>
+                    <p>
+                        Get in touch with other enthusiasts from all over the world and share your
+                        experiences concerning modifications, troubleshooting or just ideas exchange.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-left" src="img/multiple-attendants.png" alt="Multiple Attendants" />
+                    <h4>Multiple Attendants</h4>
+                    <p>
+                        Enable mutli-attendant slots and handle groups of customers at certain times.
+                        No worries, Easy!Appointments can do that too!
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-right" src="img/dedicated-service-links.png" alt="Dedicated Provider & Service Links" />
+                    <h4>Dedicated Provider and Service Links</h4>
+                    <p>
+                        Use dedicated URLs in your website that can navigate your customers to book
+                        appointments with specific services and/or providers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-left" src="img/responsive-design.png" alt="Responsive Design" />
+                    <h4>Responsive Design</h4>
+                    <p>
+                        Launch the app from your mobile phone and handle all the UIs
+                        flawlessly in any viewport size.
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <img class="pull-right" src="img/rest-api.png" alt="REST API" />
+                    <h4>REST API</h4>
+                    <p>
+                        Develop rich content applications by using the flexible REST API endpoint
+                        and handle all the application-wide information from your clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+         <!--
+            #TRANSLATIONS
+          -->
+        <div id="translations" class="section container">
+            <h2 class="section-title">#Translations</h2>
+            <p>
+                Easy!Appointments supports localization and many users have contributed to the project
+                with their translations! The user interface is currently translated into English, German,
+                Greek, Portuguese, Spanish, Dutch, Japanese, French, Chinese, Polish, Italian, Luxembourgish,
+                Danish, Hungarian, Slovak, Russian, Finnish, Romanian, Turkish, Hindi and Bulgarian! You can
+                add your own language or use one of the existing
+                <a href="https://github.com/alextselegidis/easyappointments/wiki/Manage-Translations" target="_blank">available on this page</a>.
+            </p>
+        </div>
+
+        <!--
+            #GET INVOLVED
+          -->
+        <div id="get-involved" class="section container">
+            <h2 class="section-title">#Get Involved</h2>
+            <p>
+                The most important part of Easy!Appointments is its community and users. By taking
+                an active role in the support group, testing pre-release packages, providing and maintaining 
+                translations, making PayPal donations and sending pull requests on GitHub you provide great
+                assistance to the improvement of the project. Read a more
+                <a href="https://github.com/alextselegidis/easyappointments/blob/develop/doc/get-involved.md">detailed guide on GitHub</a>.
+            </p>
+        </div>
+
+        <!--
+             #FUTURE
+          -->
+        <div id="future" class="section container">
+            <h2 class="section-title">#Future</h2>
+            <p>
+                Easy!Appointments aim is to become a full-featured and extensible booking system solution
+                which will make easier the way people interact with each other as far as appointments are concerned.
+                Every release is carefully designed and implemented in order to achieve the best possible result.
+                The future of Easy!Appointments is bright and will remain as always open.
+            </p>
+        </div>
+
+         <!--
+            FOOTER
+         -->
+         <div class="footer">
+            <div class="container">
+                <div class="credits col-xs-12 col-sm-6">
+                    <img class="pull-left" src="img/ea-logo.png">
+                    <p>
+                         Copyright &copy; 2018 <a href="http://alextselegidis.com">Alex Tselegidis</a>
+                         <br>
+                         <small>Code Licensed Under GPL v3.0 | Docs CC BY 3.0</small>
+                    </p>
+                </div>
+                <div class="message col-xs-12 col-sm-6">
+                </div>
+            </div>
+         </div>
+
+
+        <script src="bundle.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-41795706-4', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
